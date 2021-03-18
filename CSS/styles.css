@@ -60,3 +60,15 @@ body{
     left: 0;
     min-height: 300px;
 }
+
+.bottom-left { 
+    bottom: 0; 
+    left: 50%; 
+    transform: translateX(-300%); 
+} 
+     
+.bottom-right { 
+    bottom: 0; 
+    right: 50%; 
+    transform: translateX(-350%); 
+}    
