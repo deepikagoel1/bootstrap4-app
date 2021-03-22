@@ -149,10 +149,7 @@
           <div
             class="col col-sm-3 order-sm-last align-self-center container d-flex justify-content-center"
           >
-            <button
-              class="btn btn-warning" id="reserve"
-              >Reserve Table</button
-            >
+            <button class="btn btn-warning" id="reserve">Reserve Table</button>
             <div id="reservetable" class="modal fade">
               <div class="modal-dialog">
                 <!-- Modal content-->
@@ -554,37 +551,6 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $("#login").click(function () {
-          $("#loginModal").modal();
-        });
-      });
-    </script>
-    <script>
-      $(document).ready(function () {
-        $("#reserve").click(function () {
-          $("#reservetable").modal();
-        });
-      });
-    </script>
-    <script>
-      $(document).ready(function () {
-        $("#mycarousel").carousel({ interval: 2000 });
-        $("#carouselButton").click(function () {
-          if ($("#carouselButton").children("span").hasClass("fa-pause")) {
-            $("#mycarousel").carousel("pause");
-            $("#carouselButton").children("span").removeClass("fa-pause");
-            $("#carouselButton").children("span").addClass("fa-play");
-          } else if (
-            $("#carouselButton").children("span").hasClass("fa-play")
-          ) {
-            $("#mycarousel").carousel("cycle");
-            $("#carouselButton").children("span").removeClass("fa-play");
-            $("#carouselButton").children("span").addClass("fa-pause");
-          }
-        });
-      });
-    </script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>
