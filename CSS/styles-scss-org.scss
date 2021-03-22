@@ -91,15 +91,3 @@ body{
     bottom: 0px;
     z-index: 1;
 }
-
-//Modal nested class
-.modal-header {
-    background: $background-dark;
-    color: floralwhite;
-    .data-dismiss {
-        color:floralwhite;
-        .modal-body {
-            background: $background-pale;
-        }
-    }   
-}
