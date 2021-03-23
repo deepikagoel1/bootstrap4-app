@@ -1,19 +1,8 @@
 {
   "name": "confusion",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a website for Ristorante Con Fusion",
   "main": "index.html",
-  "devDependencies": {
-    "clean-css": "^5.1.2",
-    "cssmin": "^0.4.3",
-    "htmlmin": "^0.0.4",
-    "lite-server": "^2.6.1",
-    "onchange": "^7.1.0",
-    "parallelshell": "^3.0.2",
-    "rimraf": "^2.6.2",
-    "uglify-js": "^2.4.11",
-    "usemin-cli": "^0.6.0"
-  },
   "scripts": {
     "start": "npm run watch:all",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -25,28 +14,26 @@
     "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
     "imagemin": "imagemin img/* -o dist/img",
     "usemin": "usemin contactus.html -d dist --htmlmin -o dist/contactus.html && usemin aboutus.html -d dist --htmlmin -o dist/aboutus.html && usemin index.html -d dist --htmlmin -o dist/index.html",
-    "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin",
-    "preinstall": "npx npm-force-resolutions"
+    "build": "npm run clean && npm run copyfonts && npm run imagemin && npm run node_modules/.bin/usemin"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/goeld9911/Bootstrap4.git"
-  },
-  "author": "Deepika",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/goeld9911/Bootstrap4/issues"
+  "devDependencies": {
+    "cssmin": "^0.4.3",
+    "htmlmin": "^0.0.4",
+    "lite-server": "^2.6.1",
+    "node-sass": "^4.7.2",
+    "onchange": "^7.1.0",
+    "parallelshell": "^3.0.2",
+    "rimraf": "^2.6.2",
+    "uglifyjs": "^2.4.11",
+    "usemin": "^0.6.0"
   },
-  "homepage": "https://github.com/goeld9911/Bootstrap4#readme",
   "dependencies": {
-    "bootstrap": "^4.0.0",
+    "bootstrap": "^4.6.0",
     "bootstrap-social": "^5.1.1",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.3.1",
-    "node-sass": "^4.7.2",
+    "jquery": "^3.6.0",
     "popper.js": "^1.12.9"
-  },
-  "resolutions": {
-    "yargs-parser": "^13.1.2"
   }
 }
