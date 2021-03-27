@@ -34,15 +34,14 @@ module.exports = function (grunt) {
                 options: {
                     watchTask: true,
                     server: {
-                        baseDir: "./"
+                        baseDir: './'
                     }
                 }
             }
         },
         copy: {
             html: {
-                files: [
-                {
+                files: [{
                     //for html
                     expand: true,
                     dot: true, 
@@ -52,8 +51,7 @@ module.exports = function (grunt) {
                 }]                
             },
             fonts: {
-                files: [
-                {
+                files: [{
                     //for font-awesome
                     expand: true,
                     dot: true,
@@ -63,7 +61,6 @@ module.exports = function (grunt) {
                 }]
             }
         },
-
         clean: {
             build: {
                 src: [ 'dist/']
@@ -73,6 +70,7 @@ module.exports = function (grunt) {
             dynamic: {
                 files: [{
                     expand: true,                  // Enable dynamic expansion
+                    dot: true,
                     cwd: './',                   // Src matches are relative to this path
                     src: ['img/*.{png,jpg,gif}'],   // Actual patterns to match
                     dest: 'dist/'                  // Destination path prefix
@@ -88,55 +86,54 @@ module.exports = function (grunt) {
                 flow: {
                     steps: {
                         css: ['cssmin'],
-                        js:['uglify']
+                        js: ['uglify']
                     },
                     post: {
                         css: [{
                             name: 'cssmin',
                             createConfig: function (context, block) {
                             var generated = context.options.generated;
-                                generated.options = {
-                                    keepSpecialComments: 0, rebase: false
-                                };
-                            }       
-                        }]
-                    }
+                            generated.options = {
+                                keepSpecialComments: 0, rebase: false
+                            };
+                        }       
+                    }]
                 }
             }
-        },
-
+        }
+    },
         // Concat
-        concat: {
-            options: {
-                separator: ';'
-            },
+    concat: {
+        options: {
+            separator: ';'
+        },
   
             // dist configuration is provided by useminPrepare
-            dist: {}
-        },
+        dist: {}
+    },
 
         // Uglify
-        uglify: {
+    uglify: {
             // dist configuration is provided by useminPrepare
-            dist: {}
-        },
+        dist: {}
+    },
 
-        cssmin: {
-            dist: {}
-        },
+    cssmin: {
+        dist: {}
+    },
 
-        // Filerev
-        filerev: {
-            options: {
-                encoding: 'utf8',
-                algorithm: 'md5',
-                length: 20
-            },
+    // Filerev
+    filerev: {
+        options: {
+            encoding: 'utf8',
+            algorithm: 'md5',
+            length: 20
+        },
   
-            release: {
-            // filerev:release hashes(md5) all assets (images, js and css )
-            // in dist directory
-                files: [{
+        release: {
+        // filerev:release hashes(md5) all assets (images, js and css )
+        // in dist directory
+            files: [{
                     src: [
                         'dist/js/*.js',
                         'dist/css/*.css',
@@ -152,7 +149,7 @@ module.exports = function (grunt) {
         usemin: {
             html: ['dist/contactus.html','dist/aboutus.html','dist/index.html'],
             options: {
-                assetsDirs: ['dist', 'dist/css','dist/js']
+                assetsDirs: ['dist', 'dist/css', 'dist/js']
             }
         },
 
