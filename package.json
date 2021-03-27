@@ -1,6 +1,10 @@
 {
   "name": "confusion",
   "version": "1.0.0",
+  "engines": {
+    "node": "14.x",
+    "npm": "6.x"
+  },
   "main": "index.html",
   "devDependencies": {
     "browser-sync": "^2.23.6",
