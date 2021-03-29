@@ -41,8 +41,7 @@
     "rimraf": "^2.6.2",
     "time-grunt": "^1.4.0",
     "uglify-js": "^2.4.11",
-    "usemin-cli": "^0.0.7",
-    "heroku config":"set NPM_CONFIG_PRODUCTION = false"
+    "usemin-cli": "^0.0.7"
   },
   "scripts": {
     "start": "npm run watch:all",
@@ -71,6 +70,7 @@
   "dependencies": {
     "bootstrap": "^4.0.0",
     "bootstrap-social": "^5.1.1",
+    "debug": "^4.3.1",
     "express": "^4.17.1",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
