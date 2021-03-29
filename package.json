@@ -44,7 +44,7 @@
     "usemin-cli": "^0.0.7"
   },
   "scripts": {
-    "start": "npm run watch:all",
+    "start": "set Port = 8000 && | npm run watch:all",
     "build:production": "node --version",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lite": "lite-server",
